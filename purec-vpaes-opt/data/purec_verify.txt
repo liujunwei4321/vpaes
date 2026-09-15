@@ -1,0 +1,26 @@
+=========== FINAL VERIFICATION ===========
+--- build optimised variant (strict warnings) ---
+clean build with -Wall -Wextra -Wpedantic, no warnings
+
+--- sanity (optimised) ---
+[test_fips197_a] PASS
+[test_fips197_b] PASS
+[test_fips197_c] PASS
+[test_cbc] PASS
+[test_ctr] PASS
+[test_cbc_decrypt_inplace] PASS
+[test_ctr_partial] PASS
+[test_aliasing_stress] PASS
+ALL SANITY CHECKS PASSED
+
+--- NIST CAVP KAT (optimised) ---
+KAT files: 48/48 PASS, vectors: 4156 passed
+
+--- differential test vs stock scalar (all modes, in-place + disjoint) ---
+differential test: optimised vs stock scalar
+
+1126 comparisons, 0 mismatches
+DIFFERENTIAL TEST PASSED
+
+--- control: stock scalar on the same KAT suite ---
+stock scalar: KAT files 48/48 PASS, vectors 4156 passed

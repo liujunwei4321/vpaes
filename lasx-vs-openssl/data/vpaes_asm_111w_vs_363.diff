@@ -1,0 +1,6 @@
+18d17
+< .globl _vpaes_encrypt_core
+114d112
+< .globl _vpaes_decrypt_core
+806d803
+< .globl _vpaes_preheat
